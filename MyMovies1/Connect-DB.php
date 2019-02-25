@@ -2,7 +2,7 @@
 
 $host = 'sql106.unaux.com';
 $user = 'unaux_23484127';
-$pwd = '79yhspzuv9gkm';
+$pwd = '';
 $db = 'unaux_23484127_1';
 
 $con = mysqli_connect($host,$user,$pwd,$db);
