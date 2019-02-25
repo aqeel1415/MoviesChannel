@@ -1,0 +1,31 @@
+.carousel-inner > .item > img {
+  width:400px;
+  height:400px;
+}
+.carousel {
+  display: inline;
+  width:400px;
+  height:400px;
+}
+
+body {
+  padding: 12px;
+  font-size: 12px;
+}
+table,
+table th,
+table td {
+border: none;
+}
+
+#more {
+  cursor: pointer;
+  background: #eee;
+}
+#cpic {
+width: 80;
+}
+
+ul {
+  list-style-type: none;
+}
