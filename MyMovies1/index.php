@@ -12,7 +12,7 @@
           include_once "api/api_latest.php";
                 $poster_path = $latest->poster_path;
 			if (empty($poster_path) && is_null($poster_path)){
-                //if there is no poster for this move 
+                //if there is no poster for this movie 
 				$poster_path = 'image/no-gambar.jpg';
 			} else { 
 				$poster_path = "$imgurl_2".$p->poster_path;
