@@ -6,7 +6,7 @@ function isAssoc(array $arr)
 }
 
 $cl = curl_init();      
-curl_setopt($cl, CURLOPT_URL, "https://api.themoviedb.org/3/movie/latest?api_key=" . $apikey);
+curl_setopt($cl, CURLOPT_URL, "https://api.themoviedb.org/3/movie/latest?include_adult=false&api_key=" . $apikey);
 curl_setopt($cl, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($cl, CURLOPT_HEADER, FALSE);
 curl_setopt($cl, CURLOPT_HTTPHEADER, array("Accept: application/json"));
