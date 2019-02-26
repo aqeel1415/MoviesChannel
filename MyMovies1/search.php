@@ -10,7 +10,8 @@ include_once "api/api_search.php";
 ?>
     <h3>Result Search: <em><?php echo $input?></em></h3>
     <hr>
-    <ul>
+ <div class="container">
+  <div class="row">
 <?php
         foreach($search->results as $results){
     		$title 		= $results->title;
@@ -27,15 +28,16 @@ include_once "api/api_search.php";
 			if (empty($backdrop) && is_null($backdrop)){
 				$backdrop =  dirname($_SERVER['PHP_SELF']).'/image/no-gambar.jpg';
 			} else {
-				$backdrop = 'http://image.tmdb.org/t/p/w300'.$backdrop;
+				$backdrop = "$imgurl_2".$backdrop;
 			}
              //search results specifications 
-    		echo '<li><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></li>';
+    		echo '<div class="col-sm"><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></div>';
             $sql = "insert into movie set Movie_ID= '$id', Name = '$title', Poster = '$backdrop' ";
             mysqli_query($con, $sql);
 		}
         ?>
-        </ul>
+  </div>
+</div>
  <?php
 include_once('footer.php');
 ?>
