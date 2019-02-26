@@ -1,4 +1,7 @@
-<link href="css/Style.css" rel="stylesheet">
+<link href="css/SlideShow.css" rel="stylesheet">
+
+
+
 <?php
   include "conf/info.php";
     $id_movie = $_GET['id'];
@@ -9,6 +12,8 @@
     include_once "header.php";
 ?>
 
+<div style="position: relative;">
+    
  <?php 
     if(isset($_GET['id'])){
     $id_movie = $_GET['id']; 
@@ -55,46 +60,36 @@
 <hr>
 <h3>Posters</h3>
 
-<div class="container">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+       
+       
+       
+       
+       
+       
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <?php 
-            $hasAddedActive = false;
-            foreach($movie_posters_id->posters as $p){     
-        ?>
-        <?php 
-            $divClass = 'item';
-            $divClass .= $hasAddedActive ? '' : ' active';
-            $hasAddedActive = true;
-            echo('<div class="'.$divClass.'">'); 
-        ?>
-            <?php 
-                echo '<img src="'.$imgurl_1.''. $p->file_path . '" width=100% >';
-            ?>
-        <?php echo('</div>'); ?>    
-        
-        <?php } ?>
+       
+ <div class="slideshow-container" >
+     
+    <?php
+        foreach($movie_posters_id->posters as $p){
+            echo '<div class="mySlides fade">';
+                echo '<div class="numbertext" ><img src="'.$imgurl_1.''. $p->file_path . '" width=30% ></div>';
+            echo '</div>';
+     } 
+    ?>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-    </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
 </div>
+   
+<br>
+
+       
+       
+       
+       
+       
+
 
      <hr>
      <h3>Details</h3>
@@ -180,8 +175,36 @@ else{
      echo "<h5>Movie not Found</h5>";
  }
  ?>
-
+</div>
 
 <?php
   include_once "footer.php";
 ?>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
