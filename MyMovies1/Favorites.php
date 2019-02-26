@@ -1,5 +1,6 @@
 <?php  include ("header.php"); 
        include ("Connect-DB.php");
+       include ("conf/info.php");
 ?>
 
 
