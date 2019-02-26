@@ -30,10 +30,10 @@
                 foreach($movie_id->credits->cast as $p){
                 $profile_path = $p->profile_path;
                 	if (empty($profile_path) && is_null($profile_path)){
-                 //if there is no profile for this cast 
+                        //if there is no profile for this cast 
         				$profile_path = 'image/no-gambar.jpg';
         			} else {
-        				$profile_path = 'http://image.tmdb.org/t/p/w300'.$p->profile_path;
+                        $profile_path = "$imgurl_2".$p->profile_path;
         			}
                 echo '<tr><td id="cpic"><img  src="'.$profile_path. '"."width=32 height=44"></td><td><a href="credit.php?id=' . $p->credit_id . '">'. $p->name ."</a></td><td>"." $p->character"."</td></tr>";     
                 }    
