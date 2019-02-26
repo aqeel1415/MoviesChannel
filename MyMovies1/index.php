@@ -6,7 +6,7 @@
 ?>
     <h1>The Latest Movie </h1>
     <hr>
-    <ul>
+    <ul style="list-style-type: none;">
           <?php
           include_once "api/api_latest.php";
                 $poster_path = $latest->poster_path;
