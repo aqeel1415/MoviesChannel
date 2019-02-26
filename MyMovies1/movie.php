@@ -1,3 +1,4 @@
+<link href="css/Style.css" rel="stylesheet">
 <?php
   include "conf/info.php";
     $id_movie = $_GET['id'];
