@@ -1,3 +1,4 @@
+<link href="css/Style.css" rel="stylesheet">
 <?php
 include('Connect-DB.php'); 
 $input=$_GET['search'];
@@ -9,14 +10,10 @@ include_once "api/api_search.php";
 ?>
     <h3>Result Search: <em><?php echo $input?></em></h3>
     <hr>
-    
-    
-    
- <div class="container">
-  <div class="row">
+    <ul>
 <?php
         foreach($search->results as $results){
-			$title 		= $results->title;
+    		$title 		= $results->title;
 			$id 		= $results->id;
 			$release	= $results->release_date;
 			if (!empty($release) && !is_null($release)){
@@ -32,16 +29,13 @@ include_once "api/api_search.php";
 			} else {
 				$backdrop = 'http://image.tmdb.org/t/p/w300'.$backdrop;
 			}
-            
-            
-            //search results specifications 
-			echo '<div class="col-sm"><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></div>';
+             //search results specifications 
+    		echo '<li><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></li>';
             $sql = "insert into movie set Movie_ID= '$id', Name = '$title', Poster = '$backdrop' ";
             mysqli_query($con, $sql);
 		}
         ?>
-  </div>
-</div>  
+        </ul>
  <?php
 include_once('footer.php');
 ?>
