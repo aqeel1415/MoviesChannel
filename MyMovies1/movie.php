@@ -15,7 +15,7 @@
  ?>
     <h1><?php echo $movie_id->original_title ?></h1>
  <?php
-      echo "<h5>".$movie_id->tagline."</h5>";
+    echo "<h5>".$movie_id->tagline."</h5>";
   ?>
         
   <?php
@@ -81,7 +81,7 @@
             ?>
         <?php echo('</div>'); ?>    
         
-        <? } ?>
+        <?php } ?>
 
     </div>
     <!-- Left and right controls -->
@@ -174,13 +174,13 @@
   </div>
 </div>
 
- 
-<?php 
+ <?php 
     } 
 else{
      echo "<h5>Movie not Found</h5>";
  }
  ?>
+
 
 <?php
   include_once "footer.php";
