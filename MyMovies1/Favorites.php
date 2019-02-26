@@ -7,7 +7,6 @@
 
 <h2 class="sub_Title"> My Favorite Movies</h2>
 
-    <body>
          <div class="container">
              <div class="row">
 
