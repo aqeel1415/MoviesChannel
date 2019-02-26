@@ -16,7 +16,7 @@
       include_once "api/api_now.php";
       $min = date('d F Y', strtotime($nowplaying->dates->minimum));
       $max = date('d F Y', strtotime($nowplaying->dates->maximum));
-      echo "<h5><sub>from</sub> <span>". $min . "</span> , <sub>until</sub> <span>" . $max . "</span></h5>";
+      echo "<h5><sub>From</sub> <span>". $min . "</span> , <sub>Until</sub> <span>" . $max . "</span></h5>";
     ?>
 
 
