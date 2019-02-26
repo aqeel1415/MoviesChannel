@@ -28,7 +28,7 @@
       <?php
         foreach($nowplaying->results as $p){  
          echo '<input type="hidden" name="Movie_ID" value="'.$p->id.'"?>';
-         echo '<td><div class="col-sm"><a href="movie.php?id=' . $p->id . '"><img height="250px" width="200" src="'.$imgurl_1.''. $p->poster_path . '"><h5>' . $p->original_title . " (" . substr($p->release_date, 0, 4)." )</h5><em> Rate : " . $p->vote_average . " | Vote : " . $p->vote_count . " | Popularity : " . round($p->popularity) . "</em></a></div></td>";
+         echo '<div class="col-sm"><a href="movie.php?id=' . $p->id . '"><img height="250px" width="200" src="'.$imgurl_1.''. $p->poster_path . '"><h5>' . $p->original_title . " (" . substr($p->release_date, 0, 4)." )</h5><em> Rate : " . $p->vote_average . " | Vote : " . $p->vote_count . " | Popularity : " . round($p->popularity) . "</em></a></div>";
         }
       ?>
  
