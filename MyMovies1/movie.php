@@ -163,7 +163,7 @@
         $count = 4;
         $output=""; 
         foreach($movie_similar_id->results as $sim){
-        $output.='<div class="col-sm"><a href="movie.php?id=' . $sim->id . '"><img src="http://image.tmdb.org/t/p/w300'.$sim->backdrop_path.'"><h5>' . $sim->original_title . " (" . substr($sim->release_date, 0, 4)." )</h5><em> Rate : " .$sim->vote_average . " | Vote : " .$sim->vote_count . " | Popularity : " . round($sim->popularity) . "</em></a></div>";
+        $output.='<div class="col-sm"><a href="movie.php?id=' . $sim->id . '"><img src="'.$imgurl_2.''.$sim->backdrop_path.'"><h5>' . $sim->original_title . " (" . substr($sim->release_date, 0, 4)." )</h5><em> Rate : " .$sim->vote_average . " | Vote : " .$sim->vote_count . " | Popularity : " . round($sim->popularity) . "</em></a></div>";
           if($count <=0){
             break;
             $count--;
