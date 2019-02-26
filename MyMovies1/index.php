@@ -14,8 +14,8 @@
 			if (empty($poster_path) && is_null($poster_path)){
                 //if there is no poster for this move 
 				$poster_path = 'image/no-gambar.jpg';
-			} else {
-				$poster_path = 'http://image.tmdb.org/t/p/w300'.$latest->poster_path;
+			} else { 
+				$poster_path = "$imgurl_2".$p->poster_path;
 			}
             echo '<li><a href="movie.php?id=' . $latest->id . '"><img  src="'. $poster_path . '" /><h4>' . $latest->original_title . " (" . substr($latest->release_date, 0, 4) . ")</h4><h5><em>Rate : " . $latest->vote_average . " |  Vote : " . $latest->vote_count . "</em></h5></a></li>";
           ?>
