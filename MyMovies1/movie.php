@@ -25,10 +25,17 @@
    <div>
       <div>
          <table class="tablesorter" id="ticketLinesTable">
-            <tbody>   
+            <tbody> 
             <?php
                 foreach($movie_id->credits->cast as $p){
-                echo '<tr><td id="cpic"><img  src="'.$imgurl_1.''. $p->profile_path . '"."width=32 height=44"></td><td><a href="credit.php?id=' . $p->credit_id . '">'. $p->name ."</a></td><td>"." $p->character"."</td></tr>";     
+                $profile_path = $p->profile_path;
+                	if (empty($profile_path) && is_null($profile_path)){
+                 //if there is no profile for this cast 
+        				$profile_path = 'image/no-gambar.jpg';
+        			} else {
+        				$profile_path = 'http://image.tmdb.org/t/p/w300'.$p->profile_path;
+        			}
+                echo '<tr><td id="cpic"><img  src="'.$profile_path. '"."width=32 height=44"></td><td><a href="credit.php?id=' . $p->credit_id . '">'. $p->name ."</a></td><td>"." $p->character"."</td></tr>";     
                 }    
              ?>
               </tbody>
