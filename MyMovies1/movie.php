@@ -18,7 +18,16 @@
       echo "<h5>".$movie_id->tagline."</h5>";
   ?>
         
-<img src="<?php echo $imgurl_2 ?><?php echo $movie_id->poster_path ?>">
+  <?php
+        $poster_path = $movie_id->poster_path;
+    		if (empty($poster_path) && is_null($poster_path)){
+                //if there is no poster for this movie 
+				$poster_path = 'image/no-gambar.jpg';
+			} else { 
+				$poster_path = "$imgurl_2".$movie_id->poster_path;
+			}
+            echo '<img src="'. $poster_path . '">';
+    ?>
 <hr>
 
 <h3>Cast</h3>
