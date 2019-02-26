@@ -15,7 +15,7 @@
                 //if there is no poster for this movie 
 				$poster_path = 'image/no-gambar.jpg';
 			} else { 
-				$poster_path = "$imgurl_2".$p->poster_path;
+				$poster_path = "$imgurl_2".$latest->poster_path;
 			}
             echo '<li><a href="movie.php?id=' . $latest->id . '"><img  src="'. $poster_path . '" /><h4>' . $latest->original_title . " (" . substr($latest->release_date, 0, 4) . ")</h4><h5><em>Rate : " . $latest->vote_average . " |  Vote : " . $latest->vote_count . "</em></h5></a></li>";
           ?>
@@ -46,13 +46,14 @@
             $hasAddedActive = true;
             echo('<div class="'.$divClass.'">'); 
         ?>
-            <?php 
-            
-     echo '<a href="movie.php?id=' . $p->id . '"><img  src="'.$imgurl_2.''. $p->poster_path . '"><h4>' . $p->original_title . " (" . substr($p->release_date, 0, 4) . ")</h4><h5><em>Rate : " . $p->vote_average . " |  Vote : " . $p->vote_count . "</em></h5></a>";
-            ?>
+       <?php   
+            echo '<a href="movie.php?id=' . $p->id . '"><img  src="'.$imgurl_2.''. $p->poster_path . '"><h4>' . $p->original_title . " (" . substr($p->release_date, 0, 4) . ")</h4><h5><em>Rate : " . $p->vote_average . " |  Vote : " . $p->vote_count . "</em></h5></a>";
+        ?>
         <?php echo('</div>'); ?>    
         
-        <? } ?>
+        <?php }
+        
+        ?>
 
     </div>
     <!-- Left and right controls -->
@@ -66,6 +67,7 @@
     </a>
   </div>
 </div>
+
 <?php
   include_once "footer.php";
 ?>	
