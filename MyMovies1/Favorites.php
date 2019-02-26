@@ -18,7 +18,7 @@
                      {
                       
                            echo '<div class="col-sm">';
-                           echo '<img height="298px" width="201" src="http://image.tmdb.org/t/p/w300'.$row["Poster"].'">';
+                           echo '<img src="http://image.tmdb.org/t/p/w300'.$row["Poster"].'">';
                            echo '<a href="movie.php?id='.$row["Movie_ID"].'"><h5>' .$row["Name"]. '</h5></a>';  
                            echo '<form  method="POST" action="RemoveFavorite.php">';
                            echo '<Button style="background:none;border : none;" type=submit name="favorite"> <img src="http://mmovies.unaux.com/MyMovies1/image/x-button.png"></Button>';
