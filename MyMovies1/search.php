@@ -34,7 +34,7 @@ include_once "api/api_search.php";
 			}
             
             
-            <!-- search results specifications -->
+            //search results specifications 
 			echo '<div class="col-sm"><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></div>';
             $sql = "insert into movie set Movie_ID= '$id', Name = '$title', Poster = '$backdrop' ";
             mysqli_query($con, $sql);
