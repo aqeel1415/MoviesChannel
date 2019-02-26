@@ -6,21 +6,15 @@
 ?>
 
 
-<html DOCTYPE>
 
-<body>
     <h1>Latest Movies</h1>
-
-
     <?php
       include_once "api/api_now.php";
       $min = date('d F Y', strtotime($nowplaying->dates->minimum));
       $max = date('d F Y', strtotime($nowplaying->dates->maximum));
       echo "<h5><sub>From</sub> <span>". $min . "</span> , <sub>Until</sub> <span>" . $max . "</span></h5>";
     ?>
-
-
-    <hr>
+ <hr>
 
  <div class="container">
   <div class="row">
@@ -36,12 +30,6 @@
 
 
 
-
-
-
-</body>
-
-</html>
 <?php
   include_once "footer.php";
 ?>	
