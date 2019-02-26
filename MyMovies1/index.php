@@ -1,4 +1,3 @@
-<link href="css/Style.css" rel="stylesheet">
 <?php
   include "conf/info.php";
   $title="Welcome to ";
