@@ -7,12 +7,20 @@
 ?>
     <h1>The Latest Movie </h1>
     <hr>
-    <ul style="list-style-type: none;" >
+    <ul>
           <?php
-            include_once "api/api_latest.php";
-             echo '<li><a href="movie.php?id=' . $latest->id . '"><img src="http://image.tmdb.org/t/p/w500'. $latest->poster_path . '"><h4>' . $latest->original_title . " (" . substr($latest->release_date, 0, 4) . ")</h4><h5><em>Rate : " . $latest->vote_average . " |  Vote : " . $latest->vote_count . "</em></h5></a></li>";
+          include_once "api/api_latest.php";
+                $poster_path = 'image/no-gambar.jpg';
+			if (empty($poster_path) && is_null($poster_path)){
+				$poster_path = 'image/no-gambar.jpg';
+			} else {
+                //if there is no poster for this move 
+				$poster_path = 'http://image.tmdb.org/t/p/w300'.$latest->poster_path;
+			}
+            echo '<li><a href="movie.php?id=' . $latest->id . '"><img  src="'. $poster_path . '" /><h4>' . $latest->original_title . " (" . substr($latest->release_date, 0, 4) . ")</h4><h5><em>Rate : " . $latest->vote_average . " |  Vote : " . $latest->vote_count . "</em></h5></a></li>";
           ?>
-    </ul>
+   </ul>
+    
     
 <h1>The Top Rated Movies </h1>
 <hr> 
