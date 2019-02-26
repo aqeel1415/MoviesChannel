@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="scripts/expander.js"></script>
   </head>
   <body>
@@ -34,15 +35,17 @@
         <a class="nav-link" href="Favorites.php">My Favorites</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0"  action="search.php" method="get">
+      <ul class="nav navbar-nav navbar-right">
+      <li>
+      <form class="form-inline my-2 my-lg-0"  action="search.php" method="get">
       <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search Movies" required aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    </li>
+    </ul> 
   </div>
 </nav>
 
 
 
    
-      
-      		
