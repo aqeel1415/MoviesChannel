@@ -5,7 +5,7 @@
 
 
 
-<h2 class="sub_Title"> My Favortie Movies</h2>
+<h2 class="sub_Title"> My Favorite Movies</h2>
 
     <body>
          <div class="container">
