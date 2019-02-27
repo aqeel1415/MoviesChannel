@@ -1,4 +1,3 @@
-<link href="css/Style.css" rel="stylesheet">
 <?php
 include('Connect-DB.php'); 
 $input=$_GET['search'];
