@@ -1,13 +1,3 @@
-.carousel-inner > .item > img {
-  width:400px;
-  height:400px;
-}
-.carousel {
-  display: inline;
-  width:400px;
-  height:400px;
-}
-
 body {
   padding: 12px;
   font-size: 12px;
