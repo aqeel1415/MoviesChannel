@@ -34,7 +34,7 @@
             echo '<img src="'. $poster_path . '">';
     ?>
 <hr>
-
+	
 <h3>Cast</h3>
    <div>
       <div>
@@ -59,15 +59,6 @@
 
 <hr>
 <h3>Posters</h3>
-
-       
-       
-       
-       
-       
-       
-
-       
  <div class="slideshow-container" >
      
     <?php
@@ -79,17 +70,8 @@
     ?>
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
 </div>
-   
 <br>
-
-       
-       
-       
-       
-       
-
 
      <hr>
      <h3>Details</h3>
