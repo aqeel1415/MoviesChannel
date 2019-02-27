@@ -16,12 +16,12 @@
     ?>
  <hr>
 
- <div class="container">
+ <div class="container-fluid">
   <div class="row">
       <?php
         foreach($nowplaying->results as $p){  
          echo '<input type="hidden" name="Movie_ID" value="'.$p->id.'"?>';
-         echo '<div class="col-sm"><a href="movie.php?id=' . $p->id . '"><img  src="'.$imgurl_2.''.$p->poster_path.'"><h5>' . $p->original_title . " (" . substr($p->release_date, 0, 4)." )</h5><em> Rate : " .$p->vote_average . " | Vote : " .$p->vote_count . " | Popularity : " . round($p->popularity) . "</em></a></div>";    
+         echo '<div class="col-sm-4"><a href="movie.php?id=' . $p->id . '"><img  src="'.$imgurl_2.''.$p->poster_path.'"><h5>' . $p->original_title . " (" . substr($p->release_date, 0, 4)." )</h5><em> Rate : " .$p->vote_average . " | Vote : " .$p->vote_count . " | Popularity : " . round($p->popularity) . "</em></a></div>";    
         }
      
       ?> 
