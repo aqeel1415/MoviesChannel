@@ -30,7 +30,7 @@ include_once "api/api_search.php";
 				$poster = "$imgurl_2".$poster;
 			}
              //search results specifications 
-    		echo '<div  class="col-sm-4"><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></div>';
+    		echo '<div  class="col-sm-4"><a href="movie.php?id=' . $id . '"><img src="'.$poster.'"><h4>'.$title.'</h4></a></div>';
 		}
         ?>
   </div>
