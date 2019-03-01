@@ -43,7 +43,7 @@
                 $profile_path = $p->profile_path;
                 	if (empty($profile_path) && is_null($profile_path)){
                         //if there is no profile for this cast 
-        				$profile_path = 'image/no-gambar.jpg';
+        				$profile_path = 'image/no-profile.png';
         			} else {
                         $profile_path = "$imgurl_2".$p->profile_path;
         			}
