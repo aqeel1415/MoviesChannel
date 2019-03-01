@@ -9,7 +9,7 @@ include_once "api/api_search.php";
 ?>
     <h3>Result Search: <em><?php echo $input?></em></h3>
     <hr>
- <div class="container">
+ <div class="container-fluid">
   <div class="row">
 <?php
         foreach($search->results as $results){
@@ -23,18 +23,20 @@ include_once "api/api_search.php";
 					$title = $title.' ('.$year.')';
 				}
 			}
-			$backdrop 	= $results->poster_path;
-			if (empty($backdrop) && is_null($backdrop)){
-				$backdrop =  dirname($_SERVER['PHP_SELF']).'/image/no-gambar.jpg';
+			$poster 	= $results->poster_path;
+			if (empty($poster) && is_null($poster)){
+				$poster =  dirname($_SERVER['PHP_SELF']).'/image/no-gambar.jpg';
 			} else {
-				$backdrop = "$imgurl_2".$backdrop;
+				$poster = "$imgurl_2".$poster;
 			}
              //search results specifications 
-    		echo '<div class="col-sm"><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></div>';
+    		echo '<div  class="col-sm-4"><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></div>';
 		}
         ?>
   </div>
 </div>
+
+
  <?php
 include_once('footer.php');
 ?>
