@@ -47,7 +47,7 @@
         			} else {
                         $profile_path = "$imgurl_2".$p->profile_path;
         			}
-                echo '<tr><td><img  style="width:32; height:44;" src="'.$profile_path. '"></td><td><a style="padding:20;"  href="credit.php?id=' . $p->credit_id . '">'. $p->name ."</a></td><td>"." $p->character"."</td></tr>";     
+                echo '<tr><td><img  style="width:32; height:44;" src="'.$profile_path. '"></td><td><a href="credit.php?id=' . $p->credit_id . '">'. $p->name ."</a></td><td>"." $p->character"."</td></tr>";     
                 }    
              ?>
               </tbody>
