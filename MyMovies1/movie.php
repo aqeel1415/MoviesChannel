@@ -1,7 +1,5 @@
 <link href="css/SlideShow.css" rel="stylesheet">
 
-
-
 <?php
   include "conf/info.php";
     $id_movie = $_GET['id'];
@@ -49,7 +47,7 @@
         			} else {
                         $profile_path = "$imgurl_2".$p->profile_path;
         			}
-                echo '<tr><td id="cpic"><img  src="'.$profile_path. '"."width=32 height=44"></td><td><a href="credit.php?id=' . $p->credit_id . '">'. $p->name ."</a></td><td>"." $p->character"."</td></tr>";     
+                echo '<tr><td><img  style="width:32; height:44;" src="'.$profile_path. '"></td><td><a style="padding:20;"  href="credit.php?id=' . $p->credit_id . '">'. $p->name ."</a></td><td>"." $p->character"."</td></tr>";     
                 }    
              ?>
               </tbody>
