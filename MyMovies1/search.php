@@ -23,7 +23,7 @@ include_once "api/api_search.php";
 					$title = $title.' ('.$year.')';
 				}
 			}
-			$backdrop 	= $results->backdrop_path;
+			$backdrop 	= $results->poster_path;
 			if (empty($backdrop) && is_null($backdrop)){
 				$backdrop =  dirname($_SERVER['PHP_SELF']).'/image/no-gambar.jpg';
 			} else {
@@ -31,8 +31,6 @@ include_once "api/api_search.php";
 			}
              //search results specifications 
     		echo '<div class="col-sm"><a href="movie.php?id=' . $id . '"><img src="'.$backdrop.'"><h4>'.$title.'</h4></a></div>';
-            $sql = "insert into movie set Movie_ID= '$id', Name = '$title', Poster = '$backdrop' ";
-            mysqli_query($con, $sql);
 		}
         ?>
   </div>
