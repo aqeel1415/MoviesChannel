@@ -8,8 +8,8 @@
 
 <h2 class="sub_Title"> My Favorite Movies</h2>
 
-         <div class="container">
-             <div class="row">
+ <div class="container-fluid">
+  <div class="row">
 
         <?php    
             $Select = "SELECT favorties.Movie_ID, movie.Name, movie.Poster FROM favorties JOIN movie on favorties.Movie_ID= movie.Movie_ID";
@@ -17,7 +17,7 @@
             while($row = mysqli_fetch_array($runQuery))
                      {
                       
-                           echo '<div class="col-sm">';
+                           echo '<div class="col-sm-4">';
                            echo '<img  src="'.$imgurl_2.''.$row["Poster"].'">';
                            echo '<a href="movie.php?id='.$row["Movie_ID"].'"><h5>' .$row["Name"]. '</h5></a>';  
                            echo '<form  method="POST" action="RemoveFavorite.php">';
